@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
 
     if @question.include? '?'
       @answer = "Silly question, get dressed and go to work!"
-    elsif @question.downcase.include? "i am going to work"
+    elsif @question.downcase&.include? "i am going to work"
       @answer = "Great!"
     else
       @answer = "I don't care, get dressed and go to work!"
